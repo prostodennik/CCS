@@ -1,0 +1,25 @@
+$desktop: 1200px;
+$tablets: 768px;
+$phones: 480px;
+$baseColor: #ffffff;
+$btnColor: #3e9cdc;
+$bC: #10101d;
+$footColor: #3d4050;
+$headColor: #10101de5;
+$baseFontSize: 13px;
+$borderBtn: #6f6d7b;
+$bcOrdering: #272733;
+$zIndex: 10000;
+
+$dark: #2a2b30;
+$border: #286690;
+
+:root {
+  --index: calc(1vw + 1vh);
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
+@import "./components/media.scss";
+@import "./components/*.scss";

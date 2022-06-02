@@ -1,0 +1,45 @@
+.menu {
+  position: fixed;
+  left: -2500px;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: url(images/bg-hello.png) center right 10%/ cover no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  transition: .4s;
+  width: 100%;
+  height: 100%;
+  
+  &__wrapper {
+    background: #fff;
+    height: 100%;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include phones {
+      width: 100%;
+    }
+  }
+}
+
+.menu-nav {
+
+  &__title {
+    margin-bottom: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.menu-active {
+  opacity: 1;
+  left: 0;
+}

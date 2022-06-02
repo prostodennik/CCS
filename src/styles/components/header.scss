@@ -1,0 +1,101 @@
+.header {
+  background: $headColor;
+  position: fixed;
+  padding: 33.5px 0 33.5px;
+  width: 100%;
+  z-index: $zIndex;
+
+  &__container.container {
+    justify-content: space-between;
+  }
+
+
+  &__title {
+      display: flex;
+      align-items: center;
+  }
+
+  &__sub-title {
+      font-weight: 800;
+      font-size: 28px;
+      text-transform: uppercase;
+  }
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include tablets {
+    display: none;
+  }
+
+  &__title {
+      font-size: $baseFontSize;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: $baseColor;
+      margin-right: 63px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+          color: $btnColor;
+          cursor: pointer;
+      }
+  }
+}
+
+.header__tablets {
+  &-menu {
+    z-index: 10001;
+    background: transparent;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    display: none;
+
+    @include tablets {
+      display: block;
+    }
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 4px;
+      background: $baseColor;
+      left: 0;
+      transition: 0.4s;
+    }
+    &:after {
+      top: 5px;
+    }
+    &:before {
+      bottom: 5px;
+    }
+  }
+  &-item {
+    background: $baseColor;
+    width: 24px;
+    height: 4px;
+    position: relative;
+    transform: scale(1);
+  }
+}
+
+.header__tablets__menu-active {
+  .header__tablets-item {
+    transform: scale(0);
+  }
+  &::before {
+    transform: rotate(-45deg);
+    top: 9px;
+  }
+  &::after {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+}
